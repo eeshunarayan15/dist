@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="shortcut icon" href="./asset/apple-touch-icon.png" type="image/x-icon">
+    <title>Sundown Studio</title>
+    <style>
+        #nav h1{
+            position: relative;
+            overflow: hidden;
+
+        }
+#nav h1:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.4s;
+   
+}
+#nav h1:hover::after{
+    bottom: 0;
+    border-radius: 0;
+
+}
+#nav h1 a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+#nav h1 a:hover{
+    overflow: hidden;
+    color: white;
+    /* here i have used color white for a tag hover effect but when i doin in tailwind not working why */
+    
+  
+}
+#nav h1:hover{
+    color: white;
+}
+        
+#baby{
+    border-bottom: 1px solid black;
+    margin: auto 1.5%;
+   
+}
+#main{
+    position: absolute;
+    
+}
+#hero-shape{ 
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color: orangered;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top: 80vh;
+        overflow: hidden;
+    filter: blur(20px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} 
+#hero-1{
+    width: 30vw;
+    height: 30vw;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    top: 100vh;
+    right: 0;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hero-2{
+    width: 30vw;
+    height: 30vw;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    top: 100vh;
+    right: 0;
+    filter: blur(20px);
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hero-3{
+    width: 30vw;
+    height: 30vw;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    top: 100vh;
+    right: 0;
+    filter: blur(20px);
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes anime1 {
+ from {
+    transform: translate(-10%,-10%);
+ }
+ to{
+    transform: translate(10%,10%);
+ }
+  
+}
+#video{
+   position: relative;
+   width: 97.5%;
+   margin: 0 auto;
+}
+
+#gola{
+    width: 70px;
+    height: 70px;
+    background-color: orangered;
+    border-radius: 50%;
+    display: inline-block;
+}
+#con{
+  
+  border-bottom: 1px transparent  black;
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  
+}
+#moving-text h1{
+    
+    display: inline-block;
+}
+#moving-text{
+    /* overflow: hidden; */
+ overflow-x:  auto;
+    width: 100vw;
+    white-space: nowrap;
+    
+}
+      
+#moving-text::-webkit-scrollbar{
+    display: none;
+    width: 0; 
+    height: 0; 
+}
+
+
+@keyframes move{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+#third{
+    position: relative;
+}
+
+#gooey{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    filter: blur(20px);
+    background:linear-gradient( to top right,rgb(255, 68, 0),rgb(251, 128, 83));
+    animation-name: goo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-timing-function: ease-in-out;
+}
+#left{
+    position: relative;
+    z-index: 9;
+}
+
+@keyframes goo {
+    from {
+        transform: translate(10,-10%) skew(0);
+    }
+    to {
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+    
+}
+
+
+
+.elm{
+    height: 150px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    border-bottom: 1px solid black;
+}
+.elm .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all 0.4s ease;
+
+}
+.elm h2{
+    position: relative;
+    z-index: 9;
+}
+.elm:hover .overlay{top: 0;
+
+}
+
+
+
+
+
+
+
+        </style>
+</head>
+<body>
+   <div class="bg-pinky min-h-screen" id="main">
+     <nav id="page" class="h-[120px] w-screen bg-pinky flex justify-between px-6 items-center">
+        <img class="w-32" src="./asset/navlogo.svg" alt="">
+        <div id="nav" class="flex gap-10    ">
+            <h1 class="border-[1px] border-black py-1 px-4 rounded-2xl font-semibold text-xl "><a class="" href="#">Work</a></h1>
+            <h1 class="border-[1px]  border-black py-1 px-4 rounded-2xl text-xl font-semibold  "><a href="#">Studio</a></h1>
+            <h1 class="border-[1px]  border-black py-1 px-4 rounded-2xl text-xl font-semibold  "><a href="#">Contact</a></h1>
+
+
+        </div>
+
+     </nav>
+
+<!--centere starts here  -->
+
+     <div id="center" class="flex ">
+
+        <!--left starts here  -->
+
+        <div id="left " class="w-1/2 text-black h-[500px] flex flex-col justify-end  text-2xl font-bold pl-6">
+
+
+            <p>Sundown is a multi-disciplinary <br> studio focused on creating <br> unique, end-to-end experiences <br> and environments.</p>
+
+        </div><!--left ends here  -->
+        <div id="right" class="w-1/2 text-black h-[500px] flex flex-col justify-end   font-[700] text-[140px]  pr-16 leading-[110px] items-end text-end"><!--right starts here  -->
+            <h1>SPACES <br>
+                THAT <br>
+                INSPIRE <br></h1>
+
+        </div><!--right ends here  -->
+     </div><!--centere ends here  -->
+
+     <div id="baby" class="pt-5">
+    
+
+     </div>
+
+
+
+
+
+
+     <div id="hero-shape" >
+      <div id="hero-1">
+
+      </div>
+      <div id="hero-2">
+
+      </div>
+      <div id="hero-3">
+
+      </div>
+     </div>
+
+
+
+
+
+
+     <div id="video"> <!--video starts here  -->
+        <video  class="pt-10" autoplay loop muted class="" src="./asset/b7e94ef4.mp4"></video>
+     </div> <!--video ends here  -->
+
+
+<div id="page2" class="text-[100px] h-full py-[8vw]">
+
+<div id="moving-text" class="font-semibold">
+    
+    <div id="con">
+        <h1>   EXPERIENCES </h1>
+        <div id="gola"></div>
+        <h1>ENVIRONMENT</h1>
+        <div id="gola"></div>
+        <h1>CONTENT</h1>
+        <div id="gola"></div>
+
+    </div>
+    <div id="con">
+        <h1>   EXPERIENCES </h1>
+        <div id="gola"></div>
+        <h1>ENVIRONMENT</h1>
+        <div id="gola"></div>
+        <h1>CONTENT</h1>
+        <div id="gola"></div>
+    </div>
+    <div id="con">
+        <h1>   EXPERIENCES </h1>
+        <div id="gola"></div>
+        <h1>ENVIRONMENT</h1>
+        <div id="gola"></div>
+        <h1>CONTENT</h1>
+          <div id="gola"></div>
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+<div id="third" class="flex min-h-[70vh] w-[100%]">
+    <div id="left" class="w-[70%] mx-auto">
+<h1 class="text-[45px] font-[800] pl-16 ">
+    We are a group of design- <br> driven, goal-focused <br> creators, producers, and <br> designers who believe that <br> the details make all the <br> difference.
+</h1>
+    </div>
+    <div id="right" class="w-[30%] mx-auto pr-16">
+        <img class="w-[300px]" src="./asset/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.webp" alt="">
+        <p class="">We love to create, we love to solve, we love to <br> collaborate, and we love to turn amazing ideas into <br> reality. We’re here to partner with you through every <br> step of the process and know that relationships are <br> the most important things we build.</p>
+
+    </div>
+
+
+    <div id="gooey">
+       
+
+    </div>
+
+</div>
+
+<div class="min-h-[vw] pt-[20vw]">
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">Play New Kidvision</h2>
+
+
+
+</div>
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">Carmelo Anthony 7pm In Brooklyn Set</h2>
+
+
+
+</div>
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">Converse SoHo</h2>
+
+
+
+</div>
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">Capezio NYC Flagship</h2>
+
+
+
+</div>
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">Makers NYC Flagship</h2>
+
+
+
+</div>
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">Kelce Super Bowl Party</h2>
+
+
+
+</div>
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">50th Anniversary</h2>
+
+
+
+</div>
+<div class="elm">
+    <div class="overlay"></div>
+    <h2 class="font-[700] text-[50px]">NYFW Popup</h2>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+   </div>  <!--Main ends here  -->
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+   <script src="./index.js"></script>
+    
+</body>
+</html>

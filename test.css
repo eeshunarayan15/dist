@@ -1,0 +1,35 @@
+#hero1{
+    width: 20vw;
+    height: 20vw;
+    background-color: orangered;
+    filter: blur(20px);
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hero2{
+    width: 20vw;
+    height: 20vw;
+    background-color: orangered;
+    filter: blur(20px);
+    position: absolute;
+    border-radius: 50%;
+    animation-name: anime;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+
+}
+
+@keyframes anime {
+    from { 
+        transform: translate(-10%, -10%); 
+    }
+    to { 
+        transform: translate(10%, 10%); 
+    }
+}
