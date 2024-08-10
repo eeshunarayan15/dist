@@ -244,13 +244,28 @@
 
 
 
-
+#elm-container{
+ 
+}
+#fixed-image{
+    height: 30vw;
+    width: 20vw;
+    background-color: red;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 27%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
 
 
         </style>
 </head>
 <body>
-   <div class="bg-pinky min-h-screen" id="main">
+   <div class="bg-pinky h-[100vh]" id="main">
      <nav id="page" class="h-[120px] w-screen bg-pinky flex justify-between px-6 items-center">
         <img class="w-32" src="./asset/navlogo.svg" alt="">
         <div id="nav" class="flex gap-10    ">
@@ -279,7 +294,7 @@
             <h1>SPACES <br>
                 THAT <br>
                 INSPIRE <br></h1>
-
+     
         </div><!--right ends here  -->
      </div><!--centere ends here  -->
 
@@ -354,7 +369,7 @@
 
 
 
-<div id="third" class="flex min-h-[70vh] w-[100%]">
+<div id="third" class="flex min-h-screen w-[100%]">
     <div id="left" class="w-[70%] mx-auto">
 <h1 class="text-[45px] font-[800] pl-16 ">
     We are a group of design- <br> driven, goal-focused <br> creators, producers, and <br> designers who believe that <br> the details make all the <br> difference.
@@ -374,68 +389,78 @@
 
 </div>
 
-<div class="min-h-[vw] pt-[20vw]">
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">Play New Kidvision</h2>
+<div class="min-h-[100vh] pt-[20vw]">
+<div id="elm-container">
+    <div class="elm" id="elm1" data-image="https://images.unsplash.com/photo-1494809610410-160faaed4de0?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">Play New Kidvision</h2>
+    
+    
+    
+    </div>
+    <div class="elm" id="elm2" data-image="https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">Carmelo Anthony 7pm In Brooklyn Set</h2>
+    
+    
+    
+    </div>
+    <div class="elm" id="elm3" data-image="https://images.unsplash.com/photo-1526781480235-d79b4866aa9c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">Converse SoHo</h2>
+    
+    
+    
+    </div>
+    <div class="elm" id="elm4" data-image="https://plus.unsplash.com/premium_photo-1682787494953-33e83bc527d1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">Capezio NYC Flagship</h2>
+    
+    
+    
+    </div>
+    <div class="elm" id="elm5" data-image="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGdpcmxzJTIwb2ZmaWNlfGVufDB8fDB8fHww">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">Makers NYC Flagship</h2>
+    
+    
+    
+    </div>
+    <div class="elm" id="elm6" data-image="https://plus.unsplash.com/premium_photo-1713296255442-e9338f42aad8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">Kelce Super Bowl Party</h2>
+    
+    
+    
+    </div>
+    <div class="elm" id="elm7" data-image="https://plus.unsplash.com/premium_photo-1691962725045-57ff9e77f0bd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">50th Anniversary</h2>
+    
+    
+    
+    </div>
+    <div class="elm" id="elm8" data-image="https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D">
+        <div class="overlay"></div>
+        <h2 class="font-[700] text-[50px]">NYFW Popup</h2>
+    
+    
+    
+    </div>
+    
 
+    <div id="fixed-image">
+        
+    </div>
+    
+    
+</div><!-- elm container ends here -->
 
 
 </div>
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">Carmelo Anthony 7pm In Brooklyn Set</h2>
 
 
 
-</div>
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">Converse SoHo</h2>
-
-
-
-</div>
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">Capezio NYC Flagship</h2>
-
-
-
-</div>
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">Makers NYC Flagship</h2>
-
-
-
-</div>
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">Kelce Super Bowl Party</h2>
-
-
-
-</div>
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">50th Anniversary</h2>
-
-
-
-</div>
-<div class="elm">
-    <div class="overlay"></div>
-    <h2 class="font-[700] text-[50px]">NYFW Popup</h2>
-
-
-
-</div>
-
-
-
-
-</div>
 
 
    </div>  <!--Main ends here  -->
